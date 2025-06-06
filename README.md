@@ -8,17 +8,17 @@ Perceive Anything: Recognize, Explain, Caption, and Segement Anything in Images 
 
 <div align="center">
 
-**[Weifeng Lin](), [Xinyu Wei](), [Ruichuan An](), [Tianhe Ren](), [Tingwei Chen]()** <br>
-**[Renrui Zhang](), [Ziyu Guo](), [Wentao Zhang](), [Lei Zhang](), [Hongsheng Li]()** <br>
-**CUHK, HKU, PolyU, PekingU**
+[Weifeng Lin](), [Xinyu Wei](), [Ruichuan An](), [Tianhe Ren](), [Tingwei Chen](), [Renrui Zhang](), [Ziyu Guo]() <br>
+[Wentao Zhang](), [Lei Zhang](), [Hongsheng Li]() <br>
+CUHK, HKU, PolyU, PekingU
 
 </div>
 
 <p align="center">
-  <a href=""><b>🌐 Project</b></a> |
-  <a href=""><b>📕 Paper</b></a> |
-  <a href=""><b>📥 Model Download</b></a> |
-  <a href=""><b>🤗 Dataset</b></a> |
+  <a href="https://Perceive-Anything.github.io"><b>🌐 Project Website</b></a> |
+  <a href="https://arxiv.org/abs/2506.05302"><b>📕 Paper</b></a> |
+  <a href="https://huggingface.co/Perceive-Anything/PAM-3B"><b>📥 Model Download</b></a> |
+  <a href="https://huggingface.co/datasets/Perceive-Anything/PAM-data"><b>🤗 Dataset</b></a> |
   <a href="#quick-start"><b>⚡Quick Start</b></a> <br>
   <a href="#license"><b>📜 License</b></a> |
   <a href="#citation"><b>📖 Citation (BibTeX)</b></a> <br>
@@ -31,18 +31,18 @@ Perceive Anything: Recognize, Explain, Caption, and Segement Anything in Images 
 
 ## News
 
-<!-- **2025.06.20**: Release Gradio demo ([online demo](https://huggingface.co/spaces/deepseek-ai/Janus-1.3B) and [local](#gradio-demo)) -->
+<!-- **2025.06.20**: Release Gradio demo ([online demo]() and [local](#gradio-demo)) -->
 
-<!-- **2025.06.05**: Evaluation code Please refer to [this link]( https://github.com/open-compass/VLMEvalKit/pull/541). -->
+<!-- **2025.06.05**: Evaluation code Please refer to [this link](). -->
 
-**2025.06.04**: Model weights (1.5B / 3B) and training datasets are released. Please refer to [Model Checkpoints]() and [Datasets]().
+**2025.06.04**: Model weights (1.5B / 3B) and training datasets are released. Please refer to [PAM-1.5B](https://huggingface.co/Perceive-Anything/PAM-1.5B), [PAM-3B](https://huggingface.co/Perceive-Anything/PAM-3B) and [Datasets](https://huggingface.co/datasets/Perceive-Anything/PAM-data).
 
-**2025.06.03**: PAM is released, a simple end-to-end region-level VLM for object segmentation and understanding. See [paper](./janus_pro_tech_report.pdf)
+**2025.06.03**: PAM is released, a simple end-to-end region-level VLM for object segmentation and understanding. See [paper](https://arxiv.org/abs/2506.05302)
 
 
 ## Introduction
 
-**Perceive Anything Model (PAM)** is a conceptually simple and efficient framework for comprehensive region-level visual understanding in images and videos. Our approach extends SAM 2 by integrating Large Language Models (LLMs), enabling simultaneous object segmentation with the generation of diverse, region-specific semantic outputs, including categories, label definition, functional explanations, and detailed captions. We propose to efficiently transform SAM 2's rich visual features, which inherently carry general vision, localization, and semantic priors into multi-modal tokens for LLM comprehension. To support robust multi-granularity understanding, we develop a dedicated data refinement and augmentation pipeline, yielding a high-quality [**dataset**]() of image and video region-semantic annotations, including novel region-level streaming video caption data.
+**Perceive Anything Model (PAM)** is a conceptually simple and efficient framework for comprehensive region-level visual understanding in images and videos. Our approach extends SAM 2 by integrating Large Language Models (LLMs), enabling simultaneous object segmentation with the generation of diverse, region-specific semantic outputs, including categories, label definition, functional explanations, and detailed captions. We propose to efficiently transform SAM 2's rich visual features, which inherently carry general vision, localization, and semantic priors into multi-modal tokens for LLM comprehension. To support robust multi-granularity understanding, we develop a dedicated data refinement and augmentation pipeline, yielding a high-quality [**dataset**](https://huggingface.co/datasets/Perceive-Anything/PAM-data) of image and video region-semantic annotations, including novel region-level streaming video caption data.
 
 
 <p align="center">
@@ -93,7 +93,7 @@ bash download_ckpts.sh
 
 ## Dataset
 
-Please refer to [this link]() to download our refined and augmented data annotations.
+Please refer to [this link](https://huggingface.co/datasets/Perceive-Anything/PAM-data) to download our refined and augmented data annotations.
 
 **Note:** We do not directly provide the source images. However, for each dataset, we will provide the relevant download links or official website addresses to guide users on how to download them. [DATA_README](data/README.md)
 
@@ -122,7 +122,7 @@ We would like to thank the following projects for their contributions to this wo
 - [SAM](https://github.com/facebookresearch/segment-anything)
 - [SAM 2](https://github.com/facebookresearch/sam2)
 
-## Citation
+<!-- ## Citation
 
 If you find PAM useful for your research and applications, or use our dataset in your research, please use the following BibTeX entry.
 
@@ -130,3 +130,4 @@ If you find PAM useful for your research and applications, or use our dataset in
 @article{
 }
 ```
+-->
