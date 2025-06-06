@@ -122,12 +122,19 @@ We would like to thank the following projects for their contributions to this wo
 - [SAM](https://github.com/facebookresearch/segment-anything)
 - [SAM 2](https://github.com/facebookresearch/sam2)
 
-<!-- ## Citation
+## Citation
 
 If you find PAM useful for your research and applications, or use our dataset in your research, please use the following BibTeX entry.
 
 ```bibtex
-@article{
+@misc{lin2025perceiveanythingrecognizeexplain,
+      title={Perceive Anything: Recognize, Explain, Caption, and Segment Anything in Images and Videos}, 
+      author={Weifeng Lin and Xinyu Wei and Ruichuan An and Tianhe Ren and Tingwei Chen and Renrui Zhang and Ziyu Guo and Wentao Zhang and Lei Zhang and Hongsheng Li},
+      year={2025},
+      eprint={2506.05302},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.05302}, 
 }
 ```
--->
+
