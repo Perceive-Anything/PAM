@@ -35,9 +35,9 @@ CUHK, HKU, PolyU, PekingU
 
 <!-- **2025.06.05**: Evaluation code Please refer to [this link](). -->
 
-**2025.06.04**: Model weights (1.5B / 3B) and training datasets are released. Please refer to [PAM-1.5B](https://huggingface.co/Perceive-Anything/PAM-1.5B), [PAM-3B](https://huggingface.co/Perceive-Anything/PAM-3B) and [Datasets](https://huggingface.co/datasets/Perceive-Anything/PAM-data).
+**2025.06.08**: Model weights (1.5B / 3B) and training datasets are released. Please refer to [PAM-1.5B](https://huggingface.co/Perceive-Anything/PAM-1.5B), [PAM-3B](https://huggingface.co/Perceive-Anything/PAM-3B) and [Datasets](https://huggingface.co/datasets/Perceive-Anything/PAM-data).
 
-**2025.06.03**: PAM is released, a simple end-to-end region-level VLM for object segmentation and understanding. See [paper](https://arxiv.org/abs/2506.05302)
+**2025.06.08**: PAM is released, a simple end-to-end region-level VLM for object segmentation and understanding. See [paper](https://arxiv.org/abs/2506.05302)
 
 
 ## Introduction
