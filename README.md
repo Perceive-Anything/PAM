@@ -1,2 +1,132 @@
-# PAM
-Perceive Anything: Recognize, Explain, Caption, and Segment Anything in Images and Videos
+
+<div align="center">
+<h1>
+Perceive Anything: Recognize, Explain, Caption, and Segement Anything in Images and Videos (PAM)
+</h1>
+
+</div>
+
+<div align="center">
+
+**[Weifeng Lin](), [Xinyu Wei](), [Ruichuan An](), [Tianhe Ren](), [Tingwei Chen]()** <br>
+**[Renrui Zhang](), [Ziyu Guo](), [Wentao Zhang](), [Lei Zhang](), [Hongsheng Li]()** <br>
+**CUHK, HKU, PolyU, PekingU**
+
+</div>
+
+<p align="center">
+  <a href=""><b>🌐 Project</b></a> |
+  <a href=""><b>📕 Paper</b></a> |
+  <a href=""><b>📥 Model Download</b></a> |
+  <a href=""><b>🤗 Dataset</b></a> |
+  <a href="#quick-start"><b>⚡Quick Start</b></a> <br>
+  <a href="#license"><b>📜 License</b></a> |
+  <a href="#citation"><b>📖 Citation (BibTeX)</b></a> <br>
+</p>
+
+<p align="center">
+    <img src="assets/teaser_img.jpg" width="95%"> <br>
+    <img src="assets/teaser_video.jpg" width="95%"> <br>
+</p>
+
+## News
+
+<!-- **2025.06.20**: Release Gradio demo ([online demo](https://huggingface.co/spaces/deepseek-ai/Janus-1.3B) and [local](#gradio-demo)) -->
+
+<!-- **2025.06.05**: Evaluation code Please refer to [this link]( https://github.com/open-compass/VLMEvalKit/pull/541). -->
+
+**2025.06.04**: Model weights (1.5B / 3B) and training datasets are released. Please refer to [Model Checkpoints]() and [Datasets]().
+
+**2025.06.03**: PAM is released, a simple end-to-end region-level VLM for object segmentation and understanding. See [paper](./janus_pro_tech_report.pdf)
+
+
+## Introduction
+
+**Perceive Anything Model (PAM)** is a conceptually simple and efficient framework for comprehensive region-level visual understanding in images and videos. Our approach extends SAM 2 by integrating Large Language Models (LLMs), enabling simultaneous object segmentation with the generation of diverse, region-specific semantic outputs, including categories, label definition, functional explanations, and detailed captions. We propose to efficiently transform SAM 2's rich visual features, which inherently carry general vision, localization, and semantic priors into multi-modal tokens for LLM comprehension. To support robust multi-granularity understanding, we develop a dedicated data refinement and augmentation pipeline, yielding a high-quality [**dataset**]() of image and video region-semantic annotations, including novel region-level streaming video caption data.
+
+
+<p align="center">
+    <img src="assets/PAM_comp.jpg" width="95%"> <br>
+    <img src="assets/PAM_arch.jpg" width="95%"> <br>
+</p>
+
+## Installation
+
+1. Clone this repository and navigate to the base folder
+```bash
+git clone https://github.com/Afeng-x/PAM.git
+cd PAM
+```
+
+2. Install packages
+```bash
+### packages for base
+conda create -n PAM python=3.10 -y
+conda activate PAM
+pip install --upgrade pip
+pip install -e ".[train]"
+### packages for sam2
+cd sam2
+pip install -e ".[notebooks]"
+```
+
+3. Install Flash-Attention
+```bash
+pip install flash-attn --no-build-isolation
+### (If the method mentioned above don’t work for you, try the following one)
+git clone https://github.com/Dao-AILab/flash-attention.git
+cd flash-attention
+python setup.py install
+```
+
+4. Download the SAM2.1-h-large checkpoint:
+```bash
+cd llava/model/multimodal_encoder
+bash download_ckpts.sh
+```
+
+## Quick Start
+
+- Image: Please refer to the examples in [image_infer_example.ipynb](./notebooks/image_infer_example.ipynb)
+- Video: Please refer to the examples in [video_infer_example.ipynb](./notebooks/video_infer_example.ipynb)
+- Video Stream: Please refer to the examples in [video_stream_infer_example.ipynb](./notebooks/video_stream_infer_example.ipynb)
+
+## Dataset
+
+Please refer to [this link]() to download our refined and augmented data annotations.
+
+**Note:** We do not directly provide the source images. However, for each dataset, we will provide the relevant download links or official website addresses to guide users on how to download them. [DATA_README](data/README.md)
+
+<!-- ## Training PAM
+
+You can train or fine-tune PAM on custom datasets of images, videos, or both. Please check the training [README](training/README.md) on how to get started. -->
+
+## Local Gradio Demo for PAM
+In progress ......
+<!-- ### Simple Gradio Demo for Image
+
+[`pam_image.py`](pam_image.py) - Interactive Gradio web interface for drawing masks on images and getting semantics. **This demo is tested with `gradio` 5.5.0.**
+
+### Simple Gradio Demo for Video
+
+[`pam_video.py`](pam_video.py) - Interactive Gradio web interface for drawing masks on videos and getting semantics. **This demo is tested with `gradio` 5.5.0.** -->
+
+## License
+
+This code repository is licensed under [Apache 2.0](./LICENSE).
+
+## Acknowledgement
+We would like to thank the following projects for their contributions to this work:
+
+- [LLaVA-Next](https://github.com/LLaVA-VL/LLaVA-NeXT)
+- [SAM](https://github.com/facebookresearch/segment-anything)
+- [SAM 2](https://github.com/facebookresearch/sam2)
+
+## Citation
+
+If you find PAM useful for your research and applications, or use our dataset in your research, please use the following BibTeX entry.
+
+```bibtex
+@article{
+}
+```

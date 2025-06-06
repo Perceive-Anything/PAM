@@ -1,0 +1,102 @@
+[tool.black]
+line-length = 240
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PAM"
+version = "1.0.0"
+description = "Perceive Anything: Recognize, Explain, Caption, and Segement Anything in Images and Videos"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+
+[project.optional-dependencies]
+standalone = [
+    "shortuuid",
+    "httpx==0.24.0",
+    "einops",
+    "ftfy",
+]
+
+train = [
+    "PAM[standalone]",
+    "numpy==1.26.1",
+    "open_clip_torch",
+    "fastapi",
+    "markdown2[all]",
+    "numpy",
+    "requests",
+    "sentencepiece",
+    "torch==2.3.1",
+    "torchvision==0.18.1",
+    "uvicorn",
+    "wandb",
+    "deepspeed==0.14.4",
+    "peft==0.4.0",
+    "accelerate==0.29.3",
+    "tokenizers~=0.15.2",
+    "transformers",
+    "bitsandbytes==0.41.0",
+    "scikit-learn==1.2.2",
+    "sentencepiece~=0.1.99",
+    "einops==0.6.1",
+    "einops-exts==0.0.4",
+    "gradio_client==0.2.9",
+    "urllib3<=2.0.0",
+    "datasets==2.16.1",
+    "pydantic==1.10.8",
+    "timm",
+    "hf_transfer",
+    "opencv-python",
+    "av",
+    "decord",
+    "tyro",
+    "scipy",
+    "pynvml",
+]
+
+[project.urls]
+"Homepage" = "https://llava-vl.github.io"
+"Bug Tracker" = "https://github.com/haotian-liu/LLaVA/issues"
+
+[tool.setuptools.packages.find]
+include = ["llava*", "trl*"]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+]
+
+[tool.wheel]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+]
