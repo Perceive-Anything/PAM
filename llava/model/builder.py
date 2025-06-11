@@ -93,22 +93,21 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
             mm_projector_weights = {k: v.to(torch.float16) for k, v in mm_projector_weights.items()}
             model.load_state_dict(mm_projector_weights, strict=False)
         else:
-            rank0_print(f"Loaded Qwen model: {model_path}")
-
-            if "qwen" in model_name.lower() or "quyen" in model_name.lower():
-                tokenizer = AutoTokenizer.from_pretrained(model_path)
-                from llava.model.language_model.llava_qwen import LlavaQwenConfig
-                # import pdb;pdb.set_trace()
-                if overwrite_config is not None:
-                    llava_cfg = LlavaQwenConfig.from_pretrained(model_path)
-                    rank0_print(f"Overwriting config with {overwrite_config}")
-                    for k, v in overwrite_config.items():
-                        setattr(llava_cfg, k, v)
-                    model = LlavaQwenForCausalLM.from_pretrained(model_path, low_cpu_mem_usage=True, attn_implementation=attn_implementation, config=llava_cfg, **kwargs)
-                else:
-                    model = LlavaQwenForCausalLM.from_pretrained(model_path, low_cpu_mem_usage=True, attn_implementation=attn_implementation, **kwargs)
+            rank0_print(f"Loaded PAM model: {model_path}")
+            # if "qwen" in model_name.lower() or "quyen" in model_name.lower():
+            tokenizer = AutoTokenizer.from_pretrained(model_path)
+            from llava.model.language_model.llava_qwen import LlavaQwenConfig
+            # import pdb;pdb.set_trace()
+            if overwrite_config is not None:
+                llava_cfg = LlavaQwenConfig.from_pretrained(model_path)
+                rank0_print(f"Overwriting config with {overwrite_config}")
+                for k, v in overwrite_config.items():
+                    setattr(llava_cfg, k, v)
+                model = LlavaQwenForCausalLM.from_pretrained(model_path, low_cpu_mem_usage=True, attn_implementation=attn_implementation, config=llava_cfg, **kwargs)
             else:
-                raise ValueError(f"Model {model_name} not supported")
+                model = LlavaQwenForCausalLM.from_pretrained(model_path, low_cpu_mem_usage=True, attn_implementation=attn_implementation, **kwargs)
+        else:
+            raise ValueError(f"Model {model_name} not supported")
 
     rank0_print(f"Model Class: {model.__class__.__name__}")
     image_processor = None
