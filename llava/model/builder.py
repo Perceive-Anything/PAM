@@ -106,8 +106,6 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
                 model = LlavaQwenForCausalLM.from_pretrained(model_path, low_cpu_mem_usage=True, attn_implementation=attn_implementation, config=llava_cfg, **kwargs)
             else:
                 model = LlavaQwenForCausalLM.from_pretrained(model_path, low_cpu_mem_usage=True, attn_implementation=attn_implementation, **kwargs)
-        else:
-            raise ValueError(f"Model {model_name} not supported")
 
     rank0_print(f"Model Class: {model.__class__.__name__}")
     image_processor = None
