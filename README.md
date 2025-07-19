@@ -1,4 +1,35 @@
 
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=Perceive-Anything&project=PAM&lang=id">Bahasa Indonesia</a>
+      </div>
+    </div>
+  </details>
+</div>
+
+
 <div align="center">
 <h1>
 Perceive Anything: Recognize, Explain, Caption, and Segement Anything in Images and Videos (PAM)
