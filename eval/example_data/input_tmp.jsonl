@@ -1,0 +1,14 @@
+{
+    "type": "video", 
+    "image_root": "/home/ubuntu/arctanx/SAV_data/activity/frames/V_ISEbX4WvBW4", 
+    "annotations":[
+        {   
+            "event_id": 1,
+            "frames": ["00000.jpg", "00001.jpg", "00002.jpg", "00003.jpg", "00004.jpg", "00005.jpg", "00006.jpg", "00007.jpg", "00008.jpg", "00009.jpg", "00010.jpg", "00011.jpg", "00012.jpg", "00013.jpg", "00014.jpg", "00015.jpg"],
+            "gt": "A boy plays on a swing set in an outdoors children\u2019s playground.",
+            "box": [[526.5384615384615, 323.4615384615385, 369.6621135873472, 395.5384615384615]]
+        },
+        .....
+
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "video", 
+    "image_root": "/home/ubuntu/arctanx/SAV_data/activity/frames/V_ISEbX4WvBW4", 
+    "annotations":[
+        {   
+            "event_id": 1,
+            "gt": "A boy plays on a swing set in an outdoors children's playground.",
+            "pred": "What can I do for you?"
+        },
+        {   
+            "event_id": 2,
+            "gt": "A man is playing a game on a computer.",
+            "pred": "A man is playing a game on a computer."
+        }
+    ]
+}
