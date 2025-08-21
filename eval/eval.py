@@ -15,12 +15,6 @@ import argparse
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# GPT Client - replace with your own API key
-client = OpenAI(
-    api_key='YOUR_API_KEY_HERE',  # <-- [PLEASE ENTER YOUR API KEY HERE]
-    base_url="https://api.gptplus5.com/v1"  # <-- [MODIFY API BASE URL IF NEEDED]
-)
-
 def chat_with_gpt(prompt, model_name="gpt-4o"):
     """Use GPT model to process text with exponential backoff retry mechanism"""
     max_retries = 5
@@ -300,14 +294,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate Meteor, CIDEr, and Continuity scores for predictions")
     parser.add_argument("--input", type=str, required=True, help="Path to the input file")
     parser.add_argument("--output", type=str, help="Path to save results (optional)")
-    parser.add_argument("--continuity", action="store_true", help="Evaluate continuity using OpenAI API")
+    parser.add_argument("--g_stdc", action="store_true", help="Evaluate G-STDC score using OpenAI API")
     parser.add_argument("--api_key", type=str, help="OpenAI API key (required if --continuity is set)")
     parser.add_argument("--api_base", type=str, default="https://api.gptplus5.com/v1", help="OpenAI API base URL")
     
     args = parser.parse_args()
     
     # Check API key if continuity evaluation is requested
-    if args.continuity:
+    if args.g_stdc:
         if not args.api_key:
             print("Error: OpenAI API key is required for continuity evaluation")
             exit(1)
