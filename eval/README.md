@@ -1,6 +1,6 @@
 ## How to run evaluation of Streaming
 
-1. Download the streaming video dataset from [here](https://drive.google.com/file/d/1VV020tllAvlvXyjjg7mJKmY8GPjVWfTz/view?usp=drive_link) and unzip it to `eval/example_data/frames`.
+1. Download the streaming video dataset from [OneDrive](https://drive.google.com/file/d/1VV020tllAvlvXyjjg7mJKmY8GPjVWfTz/view?usp=drive_link) and unzip it to `eval/example_data/frames`.
 
 2. Set the `image_root` in `eval/example_data/input_full.jsonl` to the path of `eval/example_data/frames`.
 
