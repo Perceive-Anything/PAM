@@ -30,10 +30,13 @@ CUHK, HKU, PolyU, PekingU
 </p>
 
 ## News
+<!-- **2025.06.20**: Release Gradio demo ([online demo]() and [local](#gradio-demo)) -->
 
 <!-- **2025.06.20**: Release Gradio demo ([online demo]() and [local](#gradio-demo)) -->
 
-<!-- **2025.06.05**: Evaluation code Please refer to [this link](). -->
+**2025.09.21**: Training Code will be released in the end of September.
+
+**2025.09.19**: 🎉 Perceive Anything is accepted by NeurIPS 2025.
 
 **2025.06.08**: Model weights (1.5B / 3B) and training datasets are released. Please refer to [PAM-1.5B](https://huggingface.co/Perceive-Anything/PAM-1.5B), [PAM-3B](https://huggingface.co/Perceive-Anything/PAM-3B) and [Datasets](https://huggingface.co/datasets/Perceive-Anything/PAM-data).
 
