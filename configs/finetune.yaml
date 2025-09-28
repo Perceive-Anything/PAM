@@ -1,0 +1,4 @@
+datasets:
+  - json_path: image-obj-caption/MDVP/MDVP_bbox_doc_doclaynet_obj_detailCap_en.jsonl
+    sampling_strategy: "all"
+  # list all your training jsonl here

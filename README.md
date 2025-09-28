@@ -34,7 +34,7 @@ CUHK, HKU, PolyU, PekingU
 
 <!-- **2025.06.20**: Release Gradio demo ([online demo]() and [local](#gradio-demo)) -->
 
-**2025.09.21**: Training Code will be released in the end of September.
+**2025.09.28**: 🚀 Training Code has been released. Please check [scripts](./scripts) and [configs](./configs).
 
 **2025.09.19**: 🎉 Perceive Anything is accepted by NeurIPS 2025.
 
@@ -104,8 +104,8 @@ Please refer to [this link](https://huggingface.co/datasets/Perceive-Anything/PA
 
 You can train or fine-tune PAM on custom datasets of images, videos, or both. Please check the training [README](training/README.md) on how to get started. -->
 
-## Local Gradio Demo for PAM
-In progress ......
+<!-- ## Local Gradio Demo for PAM
+In progress ...... -->
 <!-- ### Simple Gradio Demo for Image
 
 [`pam_image.py`](pam_image.py) - Interactive Gradio web interface for drawing masks on images and getting semantics. **This demo is tested with `gradio` 5.5.0.**
